@@ -1,0 +1,16 @@
+<div *ngIf="country">
+  <img [src]="country.flag" alt="">
+  <h3>{{country.name}}</h3>
+  <p>
+    <strong>Población: </strong>
+    {{country.population}}
+  </p>
+   <p>
+    <strong>Región:</strong>
+    {{country.region}}
+  </p>
+   <p>
+    <strong>Capital: </strong>
+    {{country.capital}}
+  </p>
+</div>

@@ -1,1 +1,8 @@
-<p>home works!</p>
+<div>
+ 
+  <app-country-card  *ngFor="let country of countries$ | async"
+  [country]="country">
+
+  </app-country-card>
+  
+</div>
