@@ -1,16 +1,22 @@
-<div *ngIf="country">
-  <img [src]="country.flag" alt="">
-  <h3>{{country.name}}</h3>
-  <p>
-    <strong>Población: </strong>
-    {{country.population}}
-  </p>
-   <p>
-    <strong>Región:</strong>
-    {{country.region}}
-  </p>
-   <p>
-    <strong>Capital: </strong>
-    {{country.capital}}
-  </p>
+<div *ngIf="country" [routerLink]="'/' + country.name" class="country-card shadow">
+  
+  <div class="country-card-img">
+    <img [src]="country.flag" alt="">
+  </div>
+  
+  <div class="country-card-img">
+    <h2>{{country.name}}</h2>
+    <p>
+      <strong>Población: </strong>
+      {{country.population | number: '1.0'}}
+    </p>
+    <p>
+      <strong>Región:</strong>
+      {{country.region}}
+    </p>
+    <p>
+      <strong>Capital: </strong>
+      {{country.capital}}
+    </p>
+  </div>
 </div>
